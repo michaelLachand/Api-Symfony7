@@ -22,7 +22,7 @@ class LoginController extends AbstractController
             'last_name' => $user->getLastName(),
         ];
 
-        return new JsonResponse(json_encode($userData, JSON_THROW_ON_ERROR));
+        return $this->json($userData);
     }
 
 }
